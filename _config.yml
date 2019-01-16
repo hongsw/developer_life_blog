@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Seungwoo Life Developer
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
-timezone:
+author: Seungwoo Hong
+language: Korean, English
+timezone: Seoul
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -26,7 +26,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: [REAMDE.md]
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -78,4 +78,7 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git   
+  repo: https://github.com/hongsw/developer_life_blog.git #https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: master #published
+  message: #leave this blank
