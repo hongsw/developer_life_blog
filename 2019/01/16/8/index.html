@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Docker 를 이용한 워드프레스 개발 환경 | Seungwoo Life Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Docker 를 이용한 워드프레스 개발 환경프로젝트 마다 설정해주기 복잡하죠? 필수 개발 하드웨어 환경!  MAC 구입한다.  Windows PC는 버린다.   이하 자세한 설명은 정신건강을 위해서 생략한다. 개발 소프트웨어 환경!  개발가상환경을 구축하기 위해서 docker 를 설치 한다. https://www.docker.com/docker-mac  m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker 를 이용한 워드프레스 개발 환경">
+<meta property="og:url" content="http://yoursite.com/2019/01/16/8/index.html">
+<meta property="og:site_name" content="Seungwoo Life Developer">
+<meta property="og:description" content="Docker 를 이용한 워드프레스 개발 환경프로젝트 마다 설정해주기 복잡하죠? 필수 개발 하드웨어 환경!  MAC 구입한다.  Windows PC는 버린다.   이하 자세한 설명은 정신건강을 위해서 생략한다. 개발 소프트웨어 환경!  개발가상환경을 구축하기 위해서 docker 를 설치 한다. https://www.docker.com/docker-mac  m">
+<meta property="og:locale" content="Korean, English">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*D-VjsI4GsyBbcMBOoSl2GA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*6qyRAbAC869R0T2K6tN4GQ.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*wma55DdqyyVe11C5zFpKMw.png">
+<meta property="og:updated_time" content="2019-01-18T07:10:11.099Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker 를 이용한 워드프레스 개발 환경">
+<meta name="twitter:description" content="Docker 를 이용한 워드프레스 개발 환경프로젝트 마다 설정해주기 복잡하죠? 필수 개발 하드웨어 환경!  MAC 구입한다.  Windows PC는 버린다.   이하 자세한 설명은 정신건강을 위해서 생략한다. 개발 소프트웨어 환경!  개발가상환경을 구축하기 위해서 docker 를 설치 한다. https://www.docker.com/docker-mac  m">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2000/1*D-VjsI4GsyBbcMBOoSl2GA.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Seungwoo Life Developer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Seungwoo Life Developer</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-8" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/8/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Docker 를 이용한 워드프레스 개발 환경
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker-를-이용한-워드프레스-개발-환경"><a href="#Docker-를-이용한-워드프레스-개발-환경" class="headerlink" title="Docker 를 이용한 워드프레스 개발 환경"></a>Docker 를 이용한 워드프레스 개발 환경</h1><p>프로젝트 마다 설정해주기 복잡하죠?</p>
+<p><strong>필수 개발 하드웨어 환경!</strong></p>
+<ol>
+<li><p>MAC 구입한다.</p>
+</li>
+<li><p>Windows PC는 버린다.</p>
+</li>
+</ol>
+<p>이하 자세한 설명은 정신건강을 위해서 생략한다.</p>
+<p><strong>개발 소프트웨어 환경!</strong></p>
+<ol>
+<li><p>개발가상환경을 구축하기 위해서 docker 를 설치 한다. <a href="https://www.docker.com/docker-mac" target="_blank" rel="noopener">https://www.docker.com/docker-mac</a></p>
+</li>
+<li><p>mysql 접속을 위한 클라이언트로 sequelpro를 설치한다. <a href="http://www.sequelpro.com/" target="_blank" rel="noopener">http://www.sequelpro.com/</a></p>
+</li>
+<li><p>개발 에디터로 atom 를 사용한다. <a href="https://atom.io/" target="_blank" rel="noopener">https://atom.io/</a></p>
+</li>
+</ol>
+<p><strong>개발 폴더를 설정하고 개발 소스를 넣어서 가상환경에서 돌려보자 ~!</strong></p>
+<pre><code>cd ~ &amp;&amp; cd Github
+mkdir myproject &amp;&amp; cd myproject
+git init
+unzip myproject.zip
+</code></pre><p>개발 폴더에 기존 레거시 스파게티 코드를 넣어주고 가상환경을 실행하자</p>
+<p>모두 잘 알고 있듯이 워드프레스는 mysql, php이 기본적으로 필요합니다.</p>
+<pre><code>version: &quot;2&quot;
+services:
+  my-wpdb:
+    image: mariadb
+    volumes:
+      - ./mysql:/var/lib/mysql 
+    ports:
+      - &quot;8081:3306&quot;
+    environment:
+      MYSQL_ROOT_PASSWORD: ChangeMeIfYouWant
+  my-wp:
+    image: wordpress
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - &quot;8088:80&quot;
+    links:
+      - my-wpdb:mysql
+    environment:
+      WORDPRESS_DB_PASSWORD: ChangeMeIfYouWant
+</code></pre><p>위의 내용을 docker-compose.yml 파일로 만들고 docker-compose up -d명령을 실행해서 나만의 개발환경을 시작하자( 처음에는 시간이 걸린다. )</p>
+<p><a href="http://localhost:8088/" target="_blank" rel="noopener">http://localhost:8088/</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*D-VjsI4GsyBbcMBOoSl2GA.png" alt="이화면이 나온거라면 성공이다"><em>이화면이 나온거라면 성공이다</em></p>
+<p>기존 데이터베이스를 개발 디비에 접속해서 복원(import)하자</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6qyRAbAC869R0T2K6tN4GQ.png" alt="개발은 도커컴포저로 멋있게 시작하자 (쉽게 , 고생안하고)"><em>개발은 도커컴포저로 멋있게 시작하자 (쉽게 , 고생안하고)</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*wma55DdqyyVe11C5zFpKMw.png" alt=""></p>
+<p>우선 오늘은 여기까지..</p>
+<p>2차 글 쓰기 내용</p>
+<p>— — — 개발 환경끝 — — — —</p>
+<ol>
+<li><p>해야할일을 확인하고</p>
+</li>
+<li><p>소스 수정할거고</p>
+</li>
+<li><p>git 올리고</p>
+</li>
+</ol>
+<p>작성중</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/8/" data-id="cjr1pkl3m00081dc9dvy23tz5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/16/9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Elixir regex — http, email, img, tel, address
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/16/DevOps를 알아보자/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">DevOps를 알아보자</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/3/">점심시간에 옥상요가 하고 싶다</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/4/">리더의 정의는 모르지만, 아빠란</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/5/">일한 만큼의 보상, 그리고 DAPP</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Seungwoo Hong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

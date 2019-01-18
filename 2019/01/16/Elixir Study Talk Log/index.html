@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Elixir Study Talk Log | Seungwoo Life Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Elixir Study Talk Log지금이 적기이다. phoenix 1.2에서 이런 이상한 구조 였는데. 웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.   에서 더 자세한 이야기를 하고 있고 이렇게 바운드 콘텍스트 개념을 적용하여 위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자   phoenix을 위한">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elixir Study Talk Log">
+<meta property="og:url" content="http://yoursite.com/2019/01/16/Elixir Study Talk Log/index.html">
+<meta property="og:site_name" content="Seungwoo Life Developer">
+<meta property="og:description" content="Elixir Study Talk Log지금이 적기이다. phoenix 1.2에서 이런 이상한 구조 였는데. 웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.   에서 더 자세한 이야기를 하고 있고 이렇게 바운드 콘텍스트 개념을 적용하여 위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자   phoenix을 위한">
+<meta property="og:locale" content="Korean, English">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2508/1*SiXfSN0DB9QpfQunlP-Vtg.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2432/1*xT6O4-zDjQ6BXp-eMyNgpA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2500/1*5GjQvkP73ZugzzaJ5QQsjg.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*6QCxrtFc380_-vDAevth3w.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*XsReMDLs7u0clFF9joSWaw.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*PSEaxAX9-WOPogDvJYZujA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*6D0iZWiVDR7i1VdRZSOl3A.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*zyZgfDN5eAdqKL8BoowiDA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*M8SiIXZ-snpYJ66F5VjEgw.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2014/1*wY2_yLbe6tHW6QW-AROfwA.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*rqthMu2OIFiYcmsw1u1sTA.png">
+<meta property="og:updated_time" content="2019-01-18T07:09:32.811Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elixir Study Talk Log">
+<meta name="twitter:description" content="Elixir Study Talk Log지금이 적기이다. phoenix 1.2에서 이런 이상한 구조 였는데. 웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.   에서 더 자세한 이야기를 하고 있고 이렇게 바운드 콘텍스트 개념을 적용하여 위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자   phoenix을 위한">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Seungwoo Life Developer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Seungwoo Life Developer</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Elixir Study Talk Log" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/Elixir Study Talk Log/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Elixir Study Talk Log
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Elixir-Study-Talk-Log"><a href="#Elixir-Study-Talk-Log" class="headerlink" title="Elixir Study Talk Log"></a>Elixir Study Talk Log</h1><p>지금이 적기이다.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png" alt="phoenix 1.2에서 이런 이상한 구조 였는데."><em>phoenix 1.2에서 이런 이상한 구조 였는데.</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2508/1*SiXfSN0DB9QpfQunlP-Vtg.png" alt="웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다."><em>웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.</em></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tMO28ar0lW8" frameborder="0" allowfullscreen></iframe></center>
+
+<p>에서 더 자세한 이야기를 하고 있고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2432/1*xT6O4-zDjQ6BXp-eMyNgpA.png" alt="이렇게 바운드 콘텍스트 개념을 적용하여"><em>이렇게 바운드 콘텍스트 개념을 적용하여</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2500/1*5GjQvkP73ZugzzaJ5QQsjg.png" alt="위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자"><em>위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자</em></p>
+<iframe src="https://medium.com/media/6cb6a2f37b04e036f0e26eac45e08c35" frameborder="0"></iframe>
+
+<p>phoenix을 위한 frontend js framework를 고민하였고 vue.js를 연결해서 사용하는 방법도 당연히 리엑트와 elm도 후보였다.</p>
+<p>자연스럽게 elixir의 대한 관심은 함수형언어로 이어지고 주제는</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6QCxrtFc380_-vDAevth3w.png" alt="이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ"><em>이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XsReMDLs7u0clFF9joSWaw.png" alt="이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)"><em>이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)</em></p>
+<p>그러면 다 좋은데 웹템플릿도 괜찮을까? form만드는 것도?<br><a href="http://blog.plataformatec.com.br/2016/09/dynamic-forms-with-phoenix/" target="_blank" rel="noopener"><strong>Dynamic forms with Phoenix</strong><br><em>Today we will learn how to build forms in Phoenix that use our schema information to dynamically show the proper input…</em>blog.plataformatec.com.br</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*PSEaxAX9-WOPogDvJYZujA.png" alt="라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…"><em>라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…</em></p>
+<p>그런 고민은</p>
+<p>그러면 phoenix embeded webpage를 사용해야할지 frontend를 js framework가 하고 json / channel같은걸로 통신만 해야할지..</p>
+<h2 id="Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend"><a href="#Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend" class="headerlink" title="Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend"></a><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330" target="_blank" rel="noopener">Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend</a></h2><p><img src="https://cdn-images-1.medium.com/max/2000/1*6D0iZWiVDR7i1VdRZSOl3A.png" alt="[https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz](https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz)"><em><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz" target="_blank" rel="noopener">https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz</a></em></p>
+<p>여러 이야기중에 개인적으로 이야기가 맘에 든다. 그래서 나도 phoenix + webpack2 + vue.js 2 로 개발을 하고 있다. 그첫번째 starter 로<br><a href="https://github.com/ElixirStudy0730/phoenix_webpack2" target="_blank" rel="noopener"><strong>ElixirStudy0730/phoenix_webpack2</strong><br><em>phoenix_webpack2 - Phoenix + Webpack 2</em>github.com</a></p>
+<p>이것을 공개 했고 벌써 더 빠른사람들이 phoenix 1.3rc +webpack2<br><a href="https://elixirforum.com/t/how-to-plug-in-webpack-2-0-into-phoenix-1-3-0-rc/3969" target="_blank" rel="noopener"><strong>How to plug in webpack 2.0 into phoenix 1.3.0-rc</strong><br><em>Hi Everyone, I want to replace brunch with webpack. Does anyone has a clue how to call the watcher now in the sub…</em>elixirforum.com</a></p>
+<p>에 대한 이야기도 많이 하고 있다. (참빠르다 !!)</p>
+<p>개인적으로도 elixir phoenix +webpeck 2+ vue.js 2 의 조합이 좋다.</p>
+<p>백엔드개발자는 elixir phoenix +webpeck 2 이렇게 사용하고</p>
+<p>프론트엔드 개발자는 webpeck 2+ vue.js 2 이렇게 사용한다.</p>
+<p>같이 프론트엔드 개발자와 코워킹 해본결과 vue cli가 webpack을 지원해서 코드를 구분이어서 사용하기에도 괜찮다.</p>
+<p>추신</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*zyZgfDN5eAdqKL8BoowiDA.png" alt="[https://elixirforum.com/t/thoughts-about-single-page-applications/865/7](https://elixirforum.com/t/thoughts-about-single-page-applications/865/7) 이 이야기는 40개넘는 이야기가 꽃핀다."><em><a href="https://elixirforum.com/t/thoughts-about-single-page-applications/865/7" target="_blank" rel="noopener">https://elixirforum.com/t/thoughts-about-single-page-applications/865/7</a> 이 이야기는 40개넘는 이야기가 꽃핀다.</em></p>
+<p>(광고) ㅎ<br><a href="https://github.com/ElixirStudy0730/ElixirStudy0730" target="_blank" rel="noopener"><strong>ElixirStudy0730/ElixirStudy0730</strong><br><em>ElixirStudy0730 - 0730팀은 elixir를 한국에 전파하기 위해 조직된 스터디 모임입니다.</em>github.com</a></p>
+<p>같이 스터디 하실분 찾습니다.</p>
+<p>추신1. 더 많은 함수형 언어책이 있으면 좋겠습니다.<br><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B6064588422" target="_blank" rel="noopener"><strong>함수형 사고</strong><br><em>객체지향 언어에 길든 개발자들에게 예제를 통해 함수형으로 ‘생각’하는 법을 깨닫게 해주는 책. 스칼라 같은 함수형 언어의 수요가 늘고 있지만 자바 같은 객체지향에 익숙한 개발자들은 함수형 패러다임으로 넘어가는 데…</em>www.hanbit.co.kr</a></p>
+<p>추신2. 함수형언어를 배움에 있어서 이책도 아주 좋습니다.<br><a href="https://pragprog.com/book/phoenix/programming-phoenix" target="_blank" rel="noopener"><strong>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast by Chris McCord, Bruce Tate, and José Valim …</strong><br><em>Learn to code Phoenix from the experts: Phoenix creator Chris McCord, Elixir creator José Valim, and award-winning…</em>pragprog.com</a></p>
+<p>그밖에</p>
+<p>rail conf. vs ruby conf. vs elixir phoenix conf. 이야기 등 하였고<br><a href="http://www.elixirconf.eu/elixirconf2017/kevin-rockwood" target="_blank" rel="noopener"><strong>ElixirConf.EU 2017</strong><br><em>The third European edition of the ElixirConf is going to take place in beautiful Barcelona on 4-5 May with the…</em>www.elixirconf.eu</a></p>
+<p><a href="https://www.meetup.com/ko-KR/Seoul-Elixir-Meetup/" target="_blank" rel="noopener">elixir seoul meetup </a>의 주최자인 케빈이 5월달에 스페인에서 발표를 하게되어서 축하해주었습니다.</p>
+<p>2주후에 meetup이 있을 예정이고 매주 스터디는 수요일에 하이브아레나에서 7시에 열립니다. (아래링크 참고)<br><a href="https://www.facebook.com/events/1382561691813948/?notif_t=plan_admin_added&amp;notif_id=1488955598969209" target="_blank" rel="noopener"><strong>Elixir Study 0730</strong><br><em>ElixirStudy0730 We study building websites with the Elixir and Phoenix framework by pooling our knowledge and…</em>www.facebook.com</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*M8SiIXZ-snpYJ66F5VjEgw.png" alt=""></p>
+<p><strong>개발팁</strong> : ihex -S mix 이렇게 하고 :observer.start 명령을 실행하면 아래와 같이 프로그램이 실행되고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2014/1*wY2_yLbe6tHW6QW-AROfwA.png" alt="어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다"><em>어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*rqthMu2OIFiYcmsw1u1sTA.png" alt="물론 시스템 리소스를 사용량도 확인이 가능하다."><em>물론 시스템 리소스를 사용량도 확인이 가능하다.</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/Elixir Study Talk Log/" data-id="cjr1pkl3t000b1dc95ki3i32k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/16/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/16/3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">점심시간에 옥상요가 하고 싶다</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/3/">점심시간에 옥상요가 하고 싶다</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/4/">리더의 정의는 모르지만, 아빠란</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/5/">일한 만큼의 보상, 그리고 DAPP</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Seungwoo Hong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

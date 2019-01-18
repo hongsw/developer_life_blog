@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Elixir로 15분안에 블로그를 만들자 | Seungwoo Life Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Elixir로 15분안에 블로그를 만들자Study0730 모임 3번째 주제 어제 스터디를 하이브아레나에서 했습니다. 저는 Jakub Cieslar가 쓴 Elixir blog in 15 minutes using Phoenix framework — Step by Step 을 같이 진행해보았습니다. 확인해볼 사안은 2015년 Aug에 작성된 글이라서 지금이랑 뭐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Elixir로 15분안에 블로그를 만들자">
+<meta property="og:url" content="http://yoursite.com/2019/01/16/Elixir로 15분안에 블로그를 만들자/index.html">
+<meta property="og:site_name" content="Seungwoo Life Developer">
+<meta property="og:description" content="Elixir로 15분안에 블로그를 만들자Study0730 모임 3번째 주제 어제 스터디를 하이브아레나에서 했습니다. 저는 Jakub Cieslar가 쓴 Elixir blog in 15 minutes using Phoenix framework — Step by Step 을 같이 진행해보았습니다. 확인해볼 사안은 2015년 Aug에 작성된 글이라서 지금이랑 뭐">
+<meta property="og:locale" content="Korean, English">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*g5ifllKgY0w-CISVY3BJiQ.png">
+<meta property="og:updated_time" content="2019-01-18T07:09:39.509Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Elixir로 15분안에 블로그를 만들자">
+<meta name="twitter:description" content="Elixir로 15분안에 블로그를 만들자Study0730 모임 3번째 주제 어제 스터디를 하이브아레나에서 했습니다. 저는 Jakub Cieslar가 쓴 Elixir blog in 15 minutes using Phoenix framework — Step by Step 을 같이 진행해보았습니다. 확인해볼 사안은 2015년 Aug에 작성된 글이라서 지금이랑 뭐">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2000/1*g5ifllKgY0w-CISVY3BJiQ.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Seungwoo Life Developer" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Seungwoo Life Developer</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Elixir로 15분안에 블로그를 만들자" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/Elixir로 15분안에 블로그를 만들자/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Elixir로 15분안에 블로그를 만들자
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Elixir로-15분안에-블로그를-만들자"><a href="#Elixir로-15분안에-블로그를-만들자" class="headerlink" title="Elixir로 15분안에 블로그를 만들자"></a>Elixir로 15분안에 블로그를 만들자</h1><p>Study0730 모임 3번째 주제</p>
+<p>어제 <a href="https://github.com/ElixirStudy0730/ElixirStudy0730" target="_blank" rel="noopener">스터디</a>를 <a href="http://hivearena.com/" target="_blank" rel="noopener">하이브아레나</a>에서 했습니다.</p>
+<p>저는 Jakub Cieslar가 쓴 <a href="https://monterail.com/blog/2015/phoenix-blog/" target="_blank" rel="noopener">Elixir blog in 15 minutes using Phoenix framework — Step by Step</a> 을 같이 진행해보았습니다.</p>
+<p><strong>확인해볼 사안은</strong> 2015년 Aug에 작성된 글이라서 지금이랑 뭐가 따른지 혹은 더 개선할것들은 없는지 확인해보면서 기본적인 투토리얼을 최신버전으로 정리하고자 합니다.</p>
+<ol>
+<li><p>저자가 <a href="https://github.com/jcieslar/blog_phoenix" target="_blank" rel="noopener">git</a>에 공개한 페이지를 가져와서 하는 방법도 있지만,저자의 의도대로 <a href="http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html" target="_blank" rel="noopener">mix (phoenix build tool)</a> 로 하나하나 만드는 것을 따라해보겠습니다.</p>
+</li>
+<li><p>우선 준비할것들 linux or mac을 준비한상태에서 ASDF(언어 및 데이터베이스 등 개발자를 위한 설치 및 버전관리 툴)를 설치하고, ASDF를 이용해서 erlang과 elixir까지 설치 한다. <a href="https://www.icicletech.com/blog/elixir-and-erlang-setup-with-asdf-version-manager" target="_blank" rel="noopener">https://www.icicletech.com/blog/elixir-and-erlang-setup-with-asdf-version-manager</a></p>
+</li>
+<li><p><a href="http://www.phoenixframework.org/docs/installation" target="_blank" rel="noopener">Phoenix Framework</a> 도 설치 합니다.</p>
+<p> <strong>$ mix archive.install [</strong><a href="https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez](https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez)" target="_blank" rel="noopener">https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez](https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez)</a></p>
+</li>
+<li><p>프로젝트를 만듭니다. 관련된 기본적인 dependencies를 설치 하면 세팅완료되고, 프로젝트의 소스를 git으로 관리 합니다.</p>
+<p> <strong>$ mix phoenix.new elixir_phoenix_blog
+ </strong>Fetch and install dependencies? [Yn] Y</p>
+<p> <strong>$ cd elixir_phoenix_blog<br> $ git init</strong></p>
+</li>
+<li><p>데이터베이스는 기본적으로 postgres를 사용하도록 세팅되고 mysql은 설정을 변경해야합니다.</p>
+<p> <strong>$ vi config/dev.exs</strong></p>
+<h1 id="Configure-your-database"><a href="#Configure-your-database" class="headerlink" title="Configure your database"></a>Configure your database</h1><p> config :elixir_phoenix_blog, ElixirPhoenixBlog.Repo,</p>
+<pre><code>adapter: Ecto.Adapters.**MySQL**,
+**username: &quot;mysql_username&quot;,
+password: &quot;mysql_password&quot;,
+database: &quot;elixir_phoenix_blog&quot;,
+hostname: &quot;localhost&quot;,
+port: 3306,**
+pool_size: 10
+</code></pre><h1 id="end-of-vi"><a href="#end-of-vi" class="headerlink" title="end of vi"></a>end of vi</h1><p> <strong>$ vi mix.exs
+ </strong># Configuration for the OTP application. </p>
+<h1 id="Type-mix-help-compile-app-for-more-information"><a href="#Type-mix-help-compile-app-for-more-information" class="headerlink" title="Type mix help compile.app for more information."></a>Type <code>mix help compile.app</code> for more information.</h1><p> def application do<br>   [mod: {ElixirPhoenixCircleciBlogStarter, []}, </p>
+<pre><code>applications: [:phoenix, :phoenix_pubsub, :phoenix_html, 
+:cowboy, :logger, :gettext, 
+:phoenix_ecto, :**mariaex**]] 
+</code></pre><p> end</p>
+<p> …</p>
+<p> defp deps do </p>
+<pre><code>[{:phoenix, &quot;~&gt; 1.2.1&quot;}, 
+{:phoenix_pubsub, &quot;~&gt; 1.0&quot;}, 
+{:phoenix_ecto, &quot;~&gt; 3.0&quot;}, 
+{:postgrex, &quot;&gt;= 0.0.0&quot;}, 
+{:phoenix_html, &quot;~&gt; 2.6&quot;}, 
+{:phoenix_live_reload, &quot;~&gt; 1.0&quot;, only: :dev}, 
+{:gettext, &quot;~&gt; 0.11&quot;}, 
+{:cowboy, &quot;~&gt; 1.0&quot;}**, 
+{:mariaex, &quot;~&gt; 0.7&quot;}**] 
+</code></pre><p> end</p>
+<h1 id="mariaex-is-the-Ecto-recommended-MySQL-driver"><a href="#mariaex-is-the-Ecto-recommended-MySQL-driver" class="headerlink" title="mariaex is the Ecto recommended MySQL driver."></a>mariaex is the Ecto recommended MySQL driver.</h1><h1 id="end-of-vi-1"><a href="#end-of-vi-1" class="headerlink" title="end of vi"></a>end of vi</h1><p> <strong>$ mix deps.get
+ </strong># Ecto driver 가져오기</p>
+<p> <strong>$ mix ecto.create</strong></p>
+<h1 id="phoenix이-CRUD을-위해-contorol-model-view-html-를-자동으로-web폴더에-생성해준다"><a href="#phoenix이-CRUD을-위해-contorol-model-view-html-를-자동으로-web폴더에-생성해준다" class="headerlink" title="phoenix이 CRUD을 위해 contorol,model,view(html)를 자동으로 web폴더에 생성해준다.**"></a>phoenix이 <a href="https://ko.wikipedia.org/wiki/CRUD" target="_blank" rel="noopener">CRUD</a>을 위해 contorol,model,view(html)를 자동으로 web폴더에 생성해준다.**</h1><p> $ mix phoenix.gen.html Post posts title:string body:text**</p>
+<h1 id="controller-를-라우터-파일에-넣으면-라우팅이-된다"><a href="#controller-를-라우터-파일에-넣으면-라우팅이-된다" class="headerlink" title="controller 를 라우터 파일에 넣으면 라우팅이 된다."></a>controller 를 라우터 파일에 넣으면 라우팅이 된다.</h1><p> <strong>$ vi web/router.ex
+ </strong># add resources “/posts”, PostController<br> scope “/“, ElixirPhoenixCircleciBlogStarter do </p>
+<pre><code>pipe_through :browser 
+# Use the default browser stack 
+get &quot;/&quot;, PageController, :index 
+</code></pre><p> <strong>   resources “/posts”, PostController 
+ </strong>end</p>
+<h1 id="end-of-vi-2"><a href="#end-of-vi-2" class="headerlink" title="end of vi"></a>end of vi</h1><h1 id="phoenix-gen-을-통해서-ecto-model-을-변경했으니-migrate한다"><a href="#phoenix-gen-을-통해서-ecto-model-을-변경했으니-migrate한다" class="headerlink" title="phoenix.gen 을 통해서 ecto.model 을 변경했으니 migrate한다 ."></a>phoenix.gen 을 통해서 ecto.model 을 변경했으니 migrate한다 .</h1><p> <strong>$ mix ecto.migrate
+ </strong>Compiling 8 files (.ex)<br> 11:35:43.432 [info]  == Running ElixirPhoenixBlog.Repo.Migrations.CreatePost.change/0 forward<br> 11:35:43.432 [info]  create table posts<br> 11:35:43.625 [info]  == Migrated in 0.1s</p>
+<h1 id="성공적"><a href="#성공적" class="headerlink" title="성공적!"></a>성공적!</h1></li>
+<li><p>서버를 실행시키고 첫번째 포스트를 올려봅시다.</p>
+<p> $ mix phoenix.server</p>
+</li>
+</ol>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*g5ifllKgY0w-CISVY3BJiQ.png" alt="[http://localhost:4000/posts](http://localhost:4000/posts) 에서 새글을 넣어본 상태"><em><a href="http://localhost:4000/posts" target="_blank" rel="noopener">http://localhost:4000/posts</a> 에서 새글을 넣어본 상태</em></p>
+<p>여기 까지의 파일을 올려두었으니 연습하다 다른부분이 있으면 비교해보면 좋겠습니다.<br><a href="https://github.com/ElixirStudy0730/elixir_blog_starter" target="_blank" rel="noopener"><strong>ElixirStudy0730/<em>elixir_blog_starter</em></strong><br>elixir_blog_startergithub.com</a></p>
+<h2 id="다음주제"><a href="#다음주제" class="headerlink" title="다음주제"></a><strong>다음주제</strong></h2><ol start="0">
+<li><p>Comment를 넣는 것을 추가로 개발해 봅시다.</p>
+</li>
+<li><p>CircleCI를 연결합시다.<br><a href="https://medium.com/@QuantLayer/simple-circleci-config-for-phoenix-projects-fc3ae271aff1" target="_blank" rel="noopener"><strong>Simple CircleCI Config for Phoenix Projects</strong><br><em>by Vikram Ramakrishnan</em>medium.com</a><br><a href="http://www.zhubert.com/blog/2016/08/24/setting-up-circleci-for-an-elixir-phoenix-project/" target="_blank" rel="noopener"><strong>Setting up CircleCI for an Elixir/Phoenix Project</strong><br><em>In case this might be useful to someone else, here is how I setup a Phoenix project to automatically build in CircleCI.</em>www.zhubert.com</a></p>
+</li>
+<li><p>Ecto.Query를 공부합시다.<br><a href="https://blog.drewolson.org/composable-queries-ecto/" target="_blank" rel="noopener"><strong>Composable Queries with Ecto</strong><br><em>In my previous post I briefly covered some lessons I’d learned while building a (kind of real) web app in Elixir. Today…</em>blog.drewolson.org</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/Elixir로 15분안에 블로그를 만들자/" data-id="cjr1pkl3v000c1dc91n90ndtp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/01/16/2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          [블록체인앱] 맥주자판기의 나이 확인을 위한 블록체인
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/01/16/1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">[블록체인]을 이용한 서비스가 얼마나 많을까?</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/01/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/3/">점심시간에 옥상요가 하고 싶다</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/4/">리더의 정의는 모르지만, 아빠란</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/5/">일한 만큼의 보상, 그리고 DAPP</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Seungwoo Hong<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

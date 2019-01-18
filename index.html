@@ -97,7 +97,619 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/01/16/hello-world/" data-id="cjr1phq2r0000d8c9vucepxam" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/01/16/hello-world/" data-id="cjr1pkl3x000d1dc971hp304l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Elixir Study Talk Log" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/Elixir Study Talk Log/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Elixir-Study-Talk-Log"><a href="#Elixir-Study-Talk-Log" class="headerlink" title="Elixir Study Talk Log"></a>Elixir Study Talk Log</h1><p>지금이 적기이다.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png" alt="phoenix 1.2에서 이런 이상한 구조 였는데."><em>phoenix 1.2에서 이런 이상한 구조 였는데.</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2508/1*SiXfSN0DB9QpfQunlP-Vtg.png" alt="웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다."><em>웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.</em></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tMO28ar0lW8" frameborder="0" allowfullscreen></iframe></center>
+
+<p>에서 더 자세한 이야기를 하고 있고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2432/1*xT6O4-zDjQ6BXp-eMyNgpA.png" alt="이렇게 바운드 콘텍스트 개념을 적용하여"><em>이렇게 바운드 콘텍스트 개념을 적용하여</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2500/1*5GjQvkP73ZugzzaJ5QQsjg.png" alt="위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자"><em>위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자</em></p>
+<iframe src="https://medium.com/media/6cb6a2f37b04e036f0e26eac45e08c35" frameborder="0"></iframe>
+
+<p>phoenix을 위한 frontend js framework를 고민하였고 vue.js를 연결해서 사용하는 방법도 당연히 리엑트와 elm도 후보였다.</p>
+<p>자연스럽게 elixir의 대한 관심은 함수형언어로 이어지고 주제는</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6QCxrtFc380_-vDAevth3w.png" alt="이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ"><em>이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XsReMDLs7u0clFF9joSWaw.png" alt="이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)"><em>이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)</em></p>
+<p>그러면 다 좋은데 웹템플릿도 괜찮을까? form만드는 것도?<br><a href="http://blog.plataformatec.com.br/2016/09/dynamic-forms-with-phoenix/" target="_blank" rel="noopener"><strong>Dynamic forms with Phoenix</strong><br><em>Today we will learn how to build forms in Phoenix that use our schema information to dynamically show the proper input…</em>blog.plataformatec.com.br</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*PSEaxAX9-WOPogDvJYZujA.png" alt="라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…"><em>라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…</em></p>
+<p>그런 고민은</p>
+<p>그러면 phoenix embeded webpage를 사용해야할지 frontend를 js framework가 하고 json / channel같은걸로 통신만 해야할지..</p>
+<h2 id="Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend"><a href="#Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend" class="headerlink" title="Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend"></a><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330" target="_blank" rel="noopener">Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend</a></h2><p><img src="https://cdn-images-1.medium.com/max/2000/1*6D0iZWiVDR7i1VdRZSOl3A.png" alt="[https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz](https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz)"><em><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz" target="_blank" rel="noopener">https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz</a></em></p>
+<p>여러 이야기중에 개인적으로 이야기가 맘에 든다. 그래서 나도 phoenix + webpack2 + vue.js 2 로 개발을 하고 있다. 그첫번째 starter 로<br><a href="https://github.com/ElixirStudy0730/phoenix_webpack2" target="_blank" rel="noopener"><strong>ElixirStudy0730/phoenix_webpack2</strong><br><em>phoenix_webpack2 - Phoenix + Webpack 2</em>github.com</a></p>
+<p>이것을 공개 했고 벌써 더 빠른사람들이 phoenix 1.3rc +webpack2<br><a href="https://elixirforum.com/t/how-to-plug-in-webpack-2-0-into-phoenix-1-3-0-rc/3969" target="_blank" rel="noopener"><strong>How to plug in webpack 2.0 into phoenix 1.3.0-rc</strong><br><em>Hi Everyone, I want to replace brunch with webpack. Does anyone has a clue how to call the watcher now in the sub…</em>elixirforum.com</a></p>
+<p>에 대한 이야기도 많이 하고 있다. (참빠르다 !!)</p>
+<p>개인적으로도 elixir phoenix +webpeck 2+ vue.js 2 의 조합이 좋다.</p>
+<p>백엔드개발자는 elixir phoenix +webpeck 2 이렇게 사용하고</p>
+<p>프론트엔드 개발자는 webpeck 2+ vue.js 2 이렇게 사용한다.</p>
+<p>같이 프론트엔드 개발자와 코워킹 해본결과 vue cli가 webpack을 지원해서 코드를 구분이어서 사용하기에도 괜찮다.</p>
+<p>추신</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*zyZgfDN5eAdqKL8BoowiDA.png" alt="[https://elixirforum.com/t/thoughts-about-single-page-applications/865/7](https://elixirforum.com/t/thoughts-about-single-page-applications/865/7) 이 이야기는 40개넘는 이야기가 꽃핀다."><em><a href="https://elixirforum.com/t/thoughts-about-single-page-applications/865/7" target="_blank" rel="noopener">https://elixirforum.com/t/thoughts-about-single-page-applications/865/7</a> 이 이야기는 40개넘는 이야기가 꽃핀다.</em></p>
+<p>(광고) ㅎ<br><a href="https://github.com/ElixirStudy0730/ElixirStudy0730" target="_blank" rel="noopener"><strong>ElixirStudy0730/ElixirStudy0730</strong><br><em>ElixirStudy0730 - 0730팀은 elixir를 한국에 전파하기 위해 조직된 스터디 모임입니다.</em>github.com</a></p>
+<p>같이 스터디 하실분 찾습니다.</p>
+<p>추신1. 더 많은 함수형 언어책이 있으면 좋겠습니다.<br><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B6064588422" target="_blank" rel="noopener"><strong>함수형 사고</strong><br><em>객체지향 언어에 길든 개발자들에게 예제를 통해 함수형으로 ‘생각’하는 법을 깨닫게 해주는 책. 스칼라 같은 함수형 언어의 수요가 늘고 있지만 자바 같은 객체지향에 익숙한 개발자들은 함수형 패러다임으로 넘어가는 데…</em>www.hanbit.co.kr</a></p>
+<p>추신2. 함수형언어를 배움에 있어서 이책도 아주 좋습니다.<br><a href="https://pragprog.com/book/phoenix/programming-phoenix" target="_blank" rel="noopener"><strong>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast by Chris McCord, Bruce Tate, and José Valim …</strong><br><em>Learn to code Phoenix from the experts: Phoenix creator Chris McCord, Elixir creator José Valim, and award-winning…</em>pragprog.com</a></p>
+<p>그밖에</p>
+<p>rail conf. vs ruby conf. vs elixir phoenix conf. 이야기 등 하였고<br><a href="http://www.elixirconf.eu/elixirconf2017/kevin-rockwood" target="_blank" rel="noopener"><strong>ElixirConf.EU 2017</strong><br><em>The third European edition of the ElixirConf is going to take place in beautiful Barcelona on 4-5 May with the…</em>www.elixirconf.eu</a></p>
+<p><a href="https://www.meetup.com/ko-KR/Seoul-Elixir-Meetup/" target="_blank" rel="noopener">elixir seoul meetup </a>의 주최자인 케빈이 5월달에 스페인에서 발표를 하게되어서 축하해주었습니다.</p>
+<p>2주후에 meetup이 있을 예정이고 매주 스터디는 수요일에 하이브아레나에서 7시에 열립니다. (아래링크 참고)<br><a href="https://www.facebook.com/events/1382561691813948/?notif_t=plan_admin_added&amp;notif_id=1488955598969209" target="_blank" rel="noopener"><strong>Elixir Study 0730</strong><br><em>ElixirStudy0730 We study building websites with the Elixir and Phoenix framework by pooling our knowledge and…</em>www.facebook.com</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*M8SiIXZ-snpYJ66F5VjEgw.png" alt=""></p>
+<p><strong>개발팁</strong> : ihex -S mix 이렇게 하고 :observer.start 명령을 실행하면 아래와 같이 프로그램이 실행되고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2014/1*wY2_yLbe6tHW6QW-AROfwA.png" alt="어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다"><em>어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*rqthMu2OIFiYcmsw1u1sTA.png" alt="물론 시스템 리소스를 사용량도 확인이 가능하다."><em>물론 시스템 리소스를 사용량도 확인이 가능하다.</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/Elixir Study Talk Log/" data-id="cjr1pkl3t000b1dc95ki3i32k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-3" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/3/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/3/">점심시간에 옥상요가 하고 싶다</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="점심시간에-옥상요가-하고-싶다"><a href="#점심시간에-옥상요가-하고-싶다" class="headerlink" title="점심시간에 옥상요가 하고 싶다"></a>점심시간에 옥상요가 하고 싶다</h1><p>아침 7시에 집에서 밤9시에 집에가면 언제 요가하나…</p>
+<p>건강은 누구에게나 중요하고 성공 보다도 중요하다. 나의 건강을 위해서라도 나에게 잘 맞는 운동은 요가다 .</p>
+<p>지금까지 헬스, 스쿼시, 수영, 요가 등을 해보았지만<br>요가가 가장 오래 다녔다 ㅎ</p>
+<p>하지만, 회사를 다니면서 요가를 한다는건 거의 불가능에 가깝다는 것을 알게 되었다.</p>
+<p>알고 보니 루프탑요가라고 있지만 특정 공간에서만 이루어지고 거기까지 가서 해야하는 상황이였다.</p>
+<p><img src="https://cdn-images-1.medium.com/max/4500/1*f346w_IlcpeWwiKXrE4YSA.png" alt="구글검색 루프탑요가"><em>구글검색 루프탑요가</em></p>
+<p>근데 조금더 대중화 되었으면 좋겠다.</p>
+<p>더 가볍고 더 시간도 짧고 어디에서나 쉽게 루프탑요가를 했으면 좋겠다.</p>
+<p>“저 신논현역 근처 빌딩옥상에서, 점심시간에 요가 하려고 하는데….”</p>
+<p>같이 하실분~ ^^</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*WGh1Nrs6SgSu-DZKjnqqXg.png" alt="이렇게 좋은 옥상에 아무도 없더라구요 ㅎㅎ"><em>이렇게 좋은 옥상에 아무도 없더라구요 ㅎㅎ</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/3/" data-id="cjr1pkl3c00021dc9ajhfgtc7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-4" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/4/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/4/">리더의 정의는 모르지만, 아빠란</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="리더의-정의는-모르지만-아빠란"><a href="#리더의-정의는-모르지만-아빠란" class="headerlink" title="리더의 정의는 모르지만, 아빠란"></a>리더의 정의는 모르지만, 아빠란</h1><p>같이! 아침에 나갈때 아이와 어린이집에 등원을 해야한다.</p>
+<blockquote>
+<p>“으앙<del>~~ “ … 2살배기 아들<br>“제발</del>~~” … 2살 아들의아빠</p>
+</blockquote>
+<p>아침마다 전쟁이다. 떨어져 지내면 싸울일도 없다고 표현 하는 사람들도 있지만 어찌 아들과 아빠가 따로 지내는 것이 좋겠는가.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*9uzwh0sMMHDlxDZw1n5tkg.png" alt=""></p>
+<p>이것저것 다 도입하다가</p>
+<p>내가 먼저 나가야하는 어느날 이런 생각에 한마디 했다.</p>
+<blockquote>
+<p>“아빠 나갈 건데 <strong>같이 나갈까?</strong>” … 아빠<br>“응!“ … 아들</p>
+</blockquote>
+<p>기적이 일어 났다.</p>
+<p><strong>아들의 사전에는 “으, 으앙, 아, 이, 으앙~, 으으앙~, 응!” 밖에 없다. </strong>정의 는 조금식 앞뒤의 컨텍스트에 영향을 많이 받고, 가끔 암호학같은 퀴즈도 도입하신다.</p>
+<p>하지만, “응!” 이란 단어는 명확했다. 딸기를 먹을 때도 “응!” <strong>우유를 먹를 먹고 싶을 때도 “응!” </strong>이란 단어를 사용한다.</p>
+<p>이때다, 난 이 M&amp;A를 성공시키기 위해서 인터넷과 도서관에서 밤낮없이 공부해서 얻은 지식을 바탕으로 중대한 협상을 시작했다.</p>
+<blockquote>
+<p>“옷입고 아빠랑 <strong>같이 나갈까?</strong>” … 아빠<br>“응!” …아들</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*2jh6xfhIOXiEqWbbgxgnMQ.png" alt=""></p>
+<p>그 다음은 말할 필요도 없다.</p>
+<p>엄마는 양말, 바지, 윗옷, 잠바, 가방까지 하는데 하나의 지체없이 그것도 웃으면서 하고</p>
+<p>아빠는 계속이야기 했다.</p>
+<blockquote>
+<p>“#{…..}하고 아빠랑 같이 나갈까?” …. 아빠<br>“응!” …아들</p>
+</blockquote>
+<p>나는 큰 조직의 리더는 아니다. 난 이 아이의 아빠다.</p>
+<blockquote>
+<p>“같이 할까요?”</p>
+</blockquote>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*sp5BV9B0NAYc_GvNAUE7hw.png" alt=""></p>
+<p>cf. 블록체인을 공부하고 유의미한 DAPP을 만들고 있습니다.</p>
+<p>cf. DAPP 개발 스터디 모임도 시작합니다.</p>
+<p><a href="https://github.com/SeoulDappStudy/Awesome-DappStudy" target="_blank" rel="noopener">https://github.com/SeoulDappStudy/Awesome-DappStudy</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/4/" data-id="cjr1pkl3d00031dc96kctfmv5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-5" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/5/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/5/">일한 만큼의 보상, 그리고 DAPP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="일한-만큼의-보상-그리고-DAPP"><a href="#일한-만큼의-보상-그리고-DAPP" class="headerlink" title="일한 만큼의 보상, 그리고 DAPP"></a>일한 만큼의 보상, 그리고 DAPP</h1><p>블록체인 커뮤니티의 전략적 변화 시기와 내가 관심을 가져야 하는 이유</p>
+<p>7년간 작은 소프트웨어 개발 업체를 운영하면서 느낀것은 어떻게 하면은 우리가 일한 것에 대한 보상을 받을 것이가에 대한 해답을 찾는 과정 이였다.</p>
+<p>다양한 경험을 둘로 나누면 보상을 받은 케이스와 못 받은 케이스로 나누어진다. (기타 법적인 절차로 해결하는건 추가 비용과 시간이 발생함으로 논외)</p>
+<ul>
+<li><p>지인의 소개로 일을 해줬는데 중간에 엎어 버리고 보상도 못 받기</p>
+</li>
+<li><p>일을 정말 조금 해줬는데 기술을 누적된 효과로 보상을 정확하게 받기</p>
+</li>
+</ul>
+<p>우리는 <strong>보상을 잘~ 받은 것</strong>을 추구할 것이다.</p>
+<p><strong>쉽게 말해서 그냥 일 한 만큼 만이라도 리스크없이 보상을 받자는 것이 모든 이의 소망일 것이다. </strong>( 기우제 없이 완벽한 날씨의 환경에서의 소작민이라고 생각해도 좋다)</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*Hb0CtOR5W2leFUxhgXnJXA.png" alt=""></p>
+<p><strong>보상을 못 받은 경우</strong>의 원인을 분석해보면</p>
+<ol>
+<li><p>상호신뢰부족(일이 다 잘처리된것인지 상호 인지 부족)</p>
+</li>
+<li><p>비자동화된 잔금 프로세스(일 다해도 지연되어 받은경우)</p>
+</li>
+<li><p>클라이언트의 회사부도(일을 다해도 보상을 못받은 경우)</p>
+</li>
+</ol>
+<p>2가지가 가장 큰 문제점이고 클라이언트-개발사간의 가장 주된 이야기거리 이다.</p>
+<p>정보의 격차와 입장차 때문에 생긴것이란건 잘 알고 있고 “개발사가 잘 설명을 해줘야 하는 것도 능력인것 맞지만, 의뢰자도 자알 일을 시켜야 한다.” (1번 상황)</p>
+<p>또한, 경우에 따라선 서로 각분야에 잘 알고 있고 잘 이해하고 있는 의뢰자-개발자 의 관계로 만나도 해당 문제는 다양한 입장 때문에 생길 수 있다고 생각된다. (2,3번 상황)</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*TwcACPvppB-ZMqDMf9hoKQ.png" alt=""></p>
+<p><strong>정리하면, 모든 관계에서 작은 하나의 이해관계(체인) 이라도 문제가 생기면 기존 혹은 미래의 관계는 여지없이 불안해지고 어려워진다.</strong></p>
+<p>미래를 그려 본다, <strong>블록체인 기술이 조금이나마 미래의 그 불안를 해소 할 수 있는 여러 방법중에 하나가 되길.</strong></p>
+<p>그리고 가장중요한건, <strong>비용지출과 수입이라는 제로섬 관계</strong>에서 벗어나서 게임이론으로 무장된 블록체인으로 <strong>비제로섬</strong>인 행복의 섬으로 가고 싶은 것이 필자의 생각이다.</p>
+<p>암호화폐들의 가격들이 악재로 모두 가격이 내려가면서 몇몇 좋은 혹은 재정적 능력이 있는 코인들은 <strong>그 코인의 네트워크 경제의 부흥과 경제성/유용성을 보여주기 위해 더욱 DAPP개발을 장려</strong>하려고 할 것이다. (마치 미국 대공황 시대에 뉴딜정책처럼)</p>
+<p>이런 과정을 통해서 실생활 혹은 특정 환경에서 동작되는<strong> 새로운 유의미한 Application의 발견과 User interface 설계는 기존 개발자들과 기존 디자이너에게 도전과 기회</strong>를 제공할 것이다. (기존의 중앙집중방식의 방식에서 얻을 수 없는 응용 노하우가 필요하다)</p>
+<p>어제보다 조금 더 좋은 사회를 위해..</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*EKoDWpyqlvrWj8D5MsSq2A.png" alt="[https://github.com/SeoulDappStudy/Awesome-DappStudy](https://github.com/SeoulDappStudy/Awesome-DappStudy)"><em><a href="https://github.com/SeoulDappStudy/Awesome-DappStudy" target="_blank" rel="noopener">https://github.com/SeoulDappStudy/Awesome-DappStudy</a></em></p>
+<p>cf. 그래서 블록체인을 공부하고 유의미한 DAPP을 만들고 있습니다. ㅎ</p>
+<p>cf. 그래서 DAPP 개발 스터디 모임도 시작합니다.</p>
+<p><a href="https://github.com/SeoulDappStudy/Awesome-DappStudy" target="_blank" rel="noopener">https://github.com/SeoulDappStudy/Awesome-DappStudy</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/5/" data-id="cjr1pkl3f00041dc9mls00ime" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-6" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/6/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/6/">쉬는시간 : 아인슈타인은 어떻게 아인슈타인이 되었는가?</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="쉬는시간-아인슈타인은-어떻게-아인슈타인이-되었는가"><a href="#쉬는시간-아인슈타인은-어떻게-아인슈타인이-되었는가" class="headerlink" title="쉬는시간 : 아인슈타인은 어떻게 아인슈타인이 되었는가?"></a>쉬는시간 : 아인슈타인은 어떻게 아인슈타인이 되었는가?</h1><p><img src="https://cdn-images-1.medium.com/max/2000/1*JbzX-uJu954-zmOvhzkGqw.png" alt=""></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*bhQO-Xn56P2eEizFBXKtlQ.png" alt=""></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/nIckqQ4YTsI" frameborder="0" allowfullscreen></iframe></center>
+
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*mqNI0UMl4irkk4H2senbVw.png" alt="어떤 말 일까?"><em>어떤 말 일까?</em></p>
+<p>추신 :</p>
+<p>ether 는 가상화폐중에 하나로 알고 있는 사람들에게<br><a href="https://www.ethereum.org/ether" target="_blank" rel="noopener"><strong>What is Ether</strong><br><em>The total supply of ether and its rate of issuance was decided by the donations gathered on the 2014 presale.</em>www.ethereum.org</a></p>
+<p>ether는 물리학 용어이다.<br><a href="http://scienceworld.wolfram.com/physics/Ether.html" target="_blank" rel="noopener"><strong>Ether – from Eric Weisstein’s World of Physics</strong><br><em>Edit description</em>scienceworld.wolfram.com</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/6/" data-id="cjr1pkl3g00051dc9esphs4dd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-7" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/7/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/7/">Elixir regex — http, email, img, tel, address</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Elixir-regex-—-http-email-img-tel-address"><a href="#Elixir-regex-—-http-email-img-tel-address" class="headerlink" title="Elixir regex — http, email, img, tel, address"></a>Elixir regex — http, email, img, tel, address</h1><p>Elixre <a href="http://www.elixre.uk/" target="_blank" rel="noopener">http://www.elixre.uk/</a></p>
+<ol>
+<li><p><strong>url</strong></p>
+<p> title = “hello <a href="http://medium.com/" target="_blank" rel="noopener">http://medium.com/</a>?test=11 12”</p>
+<p> #<br> regex_url = ~r/(https?:\/\/)?(([\da-z.-]+).([a-z.]{2,6}))([\/\w .-]<em>)</em>\/?(\&amp;?)<em>(([?])</em>([^ \t\r\n\v\f])*)/</p>
+<h1 id="첫번째-매칭되는-첫번째-문장"><a href="#첫번째-매칭되는-첫번째-문장" class="headerlink" title="첫번째 매칭되는 첫번째 문장"></a>첫번째 매칭되는 첫번째 문장</h1><p> link = Regex.run(regex_url, title) |&gt; hd</p>
+<h1 id="Replace-matches-in-a-string"><a href="#Replace-matches-in-a-string" class="headerlink" title="Replace matches in a string"></a><em>Replace matches in a string</em></h1><p> title = Regex.replace(regex_url, title, “”)</p>
+</li>
+</ol>
+<p><strong>2. email (작성중)</strong></p>
+<pre><code>title = &quot;hello abc@abc.com bye&quot;
+</code></pre><p><strong>3. img (작성중)</strong></p>
+<pre><code>title = &quot;hello http://ab.com/logo.png bye&quot;
+</code></pre><p><strong>4. tel (작성중)</strong></p>
+<pre><code>title = &quot;hello +82-10-9999-1111 bye&quot;
+</code></pre><p><strong>5. address (작성중)</strong></p>
+<p><strong>etc</strong></p>
+<p>원인은 모르겠지만 parameter 부분에</p>
+<p>[-a-zA-Z0–9:%_+.~#?&amp;//=]를 넣으면 구문에러가 발생한다.</p>
+<p>[^ \t\r\n\v\f]으로 변경하여 처리하였다.</p>
+<p>참조<br><a href="https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D" target="_blank" rel="noopener"><strong>정규 표현식 - 위키백과, 우리 모두의 백과사전</strong><br><em>컴퓨터 과학의 정규 언어로부터 유래하였으나 구현체에 따라서 정규 언어보다 더 넓은 언어를 표현할 수 있는 경우도 있으며, 심지어 정규 표현식 자체의 문법도 여러 가지 존재하고 있다. 수많은 프로그래밍 언어가 정규…</em>ko.wikipedia.org</a></p>
+<pre><code>*# A regex sigil to match &apos;foo&apos;*
+~r/foo/
+
+*# Interpolation can be used*
+~r/foo/ **=** ~r/#{&quot;foo&quot;}/
+
+*# Test if a string matches*
+true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
+
+*# Run returns first match*
+[&quot;foo1&quot;, &quot;1&quot;] **=** Regex**.**run(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Scan returns all matches*
+[[&quot;foo1&quot;, &quot;1&quot;], [&quot;foo2&quot;, &quot;2&quot;]] **=** Regex**.**scan(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Replace matches in a string*
+&quot;one_two_three&quot; **=** Regex**.**replace(~r/-/, &quot;one-two-three&quot;, &quot;_&quot;)
+</code></pre><p><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener"><strong>8 Regular Expressions You Should Know</strong><br><em>Regular expressions are a language of their own. When you learn a new programming language, they’re this little sub…</em>code.tutsplus.com</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/7/" data-id="cjr1pkl3i00061dc9710zg600" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-9" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/9/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/9/">Elixir regex — http, email, img, tel, address</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Elixir-regex-—-http-email-img-tel-address"><a href="#Elixir-regex-—-http-email-img-tel-address" class="headerlink" title="Elixir regex — http, email, img, tel, address"></a>Elixir regex — http, email, img, tel, address</h1><p>Elixre <a href="http://www.elixre.uk/" target="_blank" rel="noopener">http://www.elixre.uk/</a></p>
+<ol>
+<li><p><strong>url</strong></p>
+<p> title = “hello <a href="http://medium.com/" target="_blank" rel="noopener">http://medium.com/</a>?test=11 12”</p>
+<p> #<br> regex_url = ~r/(https?:\/\/)?(([\da-z.-]+).([a-z.]{2,6}))([\/\w .-]<em>)</em>\/?(\&amp;?)<em>(([?])</em>([^ \t\r\n\v\f])*)/</p>
+<h1 id="첫번째-매칭되는-첫번째-문장"><a href="#첫번째-매칭되는-첫번째-문장" class="headerlink" title="첫번째 매칭되는 첫번째 문장"></a>첫번째 매칭되는 첫번째 문장</h1><p> link = Regex.run(regex_url, title) |&gt; hd</p>
+<h1 id="Replace-matches-in-a-string"><a href="#Replace-matches-in-a-string" class="headerlink" title="Replace matches in a string"></a><em>Replace matches in a string</em></h1><p> title = Regex.replace(regex_url, title, “”)</p>
+</li>
+</ol>
+<p><strong>2. email (작성중)</strong></p>
+<pre><code>title = &quot;hello abc@abc.com bye&quot;
+</code></pre><p><strong>3. img (작성중)</strong></p>
+<pre><code>title = &quot;hello http://ab.com/logo.png bye&quot;
+</code></pre><p><strong>4. tel (작성중)</strong></p>
+<pre><code>title = &quot;hello +82-10-9999-1111 bye&quot;
+</code></pre><p><strong>5. address (작성중)</strong></p>
+<p><strong>etc</strong></p>
+<p>원인은 모르겠지만 parameter 부분에</p>
+<p>[-a-zA-Z0–9:%_+.~#?&amp;//=]를 넣으면 구문에러가 발생한다.</p>
+<p>[^ \t\r\n\v\f]으로 변경하여 처리하였다.</p>
+<p>참조<br><a href="https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D" target="_blank" rel="noopener"><strong>정규 표현식 - 위키백과, 우리 모두의 백과사전</strong><br><em>컴퓨터 과학의 정규 언어로부터 유래하였으나 구현체에 따라서 정규 언어보다 더 넓은 언어를 표현할 수 있는 경우도 있으며, 심지어 정규 표현식 자체의 문법도 여러 가지 존재하고 있다. 수많은 프로그래밍 언어가 정규…</em>ko.wikipedia.org</a></p>
+<pre><code>*# A regex sigil to match &apos;foo&apos;*
+~r/foo/
+
+*# Interpolation can be used*
+~r/foo/ **=** ~r/#{&quot;foo&quot;}/
+
+*# Test if a string matches*
+true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
+
+*# Run returns first match*
+[&quot;foo1&quot;, &quot;1&quot;] **=** Regex**.**run(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Scan returns all matches*
+[[&quot;foo1&quot;, &quot;1&quot;], [&quot;foo2&quot;, &quot;2&quot;]] **=** Regex**.**scan(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Replace matches in a string*
+&quot;one_two_three&quot; **=** Regex**.**replace(~r/-/, &quot;one-two-three&quot;, &quot;_&quot;)
+</code></pre><p><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener"><strong>8 Regular Expressions You Should Know</strong><br><em>Regular expressions are a language of their own. When you learn a new programming language, they’re this little sub…</em>code.tutsplus.com</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/9/" data-id="cjr1pkl3l00071dc9iqraorh7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-8" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/8/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/8/">Docker 를 이용한 워드프레스 개발 환경</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker-를-이용한-워드프레스-개발-환경"><a href="#Docker-를-이용한-워드프레스-개발-환경" class="headerlink" title="Docker 를 이용한 워드프레스 개발 환경"></a>Docker 를 이용한 워드프레스 개발 환경</h1><p>프로젝트 마다 설정해주기 복잡하죠?</p>
+<p><strong>필수 개발 하드웨어 환경!</strong></p>
+<ol>
+<li><p>MAC 구입한다.</p>
+</li>
+<li><p>Windows PC는 버린다.</p>
+</li>
+</ol>
+<p>이하 자세한 설명은 정신건강을 위해서 생략한다.</p>
+<p><strong>개발 소프트웨어 환경!</strong></p>
+<ol>
+<li><p>개발가상환경을 구축하기 위해서 docker 를 설치 한다. <a href="https://www.docker.com/docker-mac" target="_blank" rel="noopener">https://www.docker.com/docker-mac</a></p>
+</li>
+<li><p>mysql 접속을 위한 클라이언트로 sequelpro를 설치한다. <a href="http://www.sequelpro.com/" target="_blank" rel="noopener">http://www.sequelpro.com/</a></p>
+</li>
+<li><p>개발 에디터로 atom 를 사용한다. <a href="https://atom.io/" target="_blank" rel="noopener">https://atom.io/</a></p>
+</li>
+</ol>
+<p><strong>개발 폴더를 설정하고 개발 소스를 넣어서 가상환경에서 돌려보자 ~!</strong></p>
+<pre><code>cd ~ &amp;&amp; cd Github
+mkdir myproject &amp;&amp; cd myproject
+git init
+unzip myproject.zip
+</code></pre><p>개발 폴더에 기존 레거시 스파게티 코드를 넣어주고 가상환경을 실행하자</p>
+<p>모두 잘 알고 있듯이 워드프레스는 mysql, php이 기본적으로 필요합니다.</p>
+<pre><code>version: &quot;2&quot;
+services:
+  my-wpdb:
+    image: mariadb
+    volumes:
+      - ./mysql:/var/lib/mysql 
+    ports:
+      - &quot;8081:3306&quot;
+    environment:
+      MYSQL_ROOT_PASSWORD: ChangeMeIfYouWant
+  my-wp:
+    image: wordpress
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - &quot;8088:80&quot;
+    links:
+      - my-wpdb:mysql
+    environment:
+      WORDPRESS_DB_PASSWORD: ChangeMeIfYouWant
+</code></pre><p>위의 내용을 docker-compose.yml 파일로 만들고 docker-compose up -d명령을 실행해서 나만의 개발환경을 시작하자( 처음에는 시간이 걸린다. )</p>
+<p><a href="http://localhost:8088/" target="_blank" rel="noopener">http://localhost:8088/</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*D-VjsI4GsyBbcMBOoSl2GA.png" alt="이화면이 나온거라면 성공이다"><em>이화면이 나온거라면 성공이다</em></p>
+<p>기존 데이터베이스를 개발 디비에 접속해서 복원(import)하자</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6qyRAbAC869R0T2K6tN4GQ.png" alt="개발은 도커컴포저로 멋있게 시작하자 (쉽게 , 고생안하고)"><em>개발은 도커컴포저로 멋있게 시작하자 (쉽게 , 고생안하고)</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*wma55DdqyyVe11C5zFpKMw.png" alt=""></p>
+<p>우선 오늘은 여기까지..</p>
+<p>2차 글 쓰기 내용</p>
+<p>— — — 개발 환경끝 — — — —</p>
+<ol>
+<li><p>해야할일을 확인하고</p>
+</li>
+<li><p>소스 수정할거고</p>
+</li>
+<li><p>git 올리고</p>
+</li>
+</ol>
+<p>작성중</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/8/" data-id="cjr1pkl3m00081dc9dvy23tz5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-DevOps를 알아보자" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/DevOps를 알아보자/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/DevOps를 알아보자/">DevOps를 알아보자</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DevOps를-알아보자"><a href="#DevOps를-알아보자" class="headerlink" title="DevOps를 알아보자"></a>DevOps를 알아보자</h1><p>말하면 다 꼭해야지 하지만 다 못하고 있는</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*6zKMK1ei98F7h83N." alt=""></p>
+<p><strong># 검색해서 찾은 내가 읽을 아티클</strong><br><a href="https://devops.com/devops-continuous-testing/" target="_blank" rel="noopener"><strong>DevOps - It’s all about continuous testing ! - DevOps.com</strong><br><em>By Marc Hornbeek on I loved reading Steve Wilson’s blog post “Don’t Fear Testing Team. DevOps is Here!” http://devops…</em>devops.com</a><br><a href="https://blog.ngconsultant.io/continuous-deployment-of-client-side-apps-with-github-pages-travis-ci-10e9d641a889" target="_blank" rel="noopener"><strong>Continuous deployment of client side apps with GitHub Pages &amp; Travis CI</strong><br><em>GitHub Pages feature enables you to conveniently host your projects. And you know what? It’s possible to automate the…</em>blog.ngconsultant.io</a><br><a href="https://github.com/lcxfs1991/blog/issues/19" target="_blank" rel="noopener"><strong>Deploy Using Travis-CI And Github Webhook - webpack doc as an example · Issue #19 · lcxfs1991/blog</strong><br><em>Overview Some friends and I have been running webpack-china for a few months. After a few months effort, most doc…</em>github.com</a></p>
+<h1 id="이번에-새로이-찾은-방법들"><a href="#이번에-새로이-찾은-방법들" class="headerlink" title="이번에 새로이 찾은 방법들"></a>이번에 새로이 찾은 방법들</h1><h2 id="전반적으로-Tools들을-정리해둔-글"><a href="#전반적으로-Tools들을-정리해둔-글" class="headerlink" title="전반적으로 Tools들을 정리해둔 글"></a>전반적으로 Tools들을 정리해둔 글</h2><p><a href="https://xebialabs.com/the-ultimate-devops-tool-chest/open-source/" target="_blank" rel="noopener"><strong>The Ultimate List of Open Source DevOps Tools</strong><br><em>Jenkins is an open source continuous integration tool written in Java. The project was forked from Hudson after a…</em>xebialabs.com</a></p>
+<h2 id="CI"><a href="#CI" class="headerlink" title="CI"></a>CI</h2><p><a href="https://blog.outsider.ne.kr/779" target="_blank" rel="noopener"><strong>Travis CI 소개 #1 :: Outsider’s Dev Story</strong><br><em>Travis CI 를 알게 된 것을 올 초였던것 같습니다.(근데 이제서야!) 당시 Github에서 놀고 있는데 mocha저장소 에 build status라는 아이콘이 눈에 띄었습니다. “어랏? 이 아이콘은 전에도…</em>blog.outsider.ne.kr</a></p>
+<p>실무적으로 다른것을 찾아보고 있지만 아직 이만한것이 없다는 생각이다.</p>
+<p>좋은 것 추천해 주시면 감사합니다.</p>
+<h2 id="모니터링-amp-테스트"><a href="#모니터링-amp-테스트" class="headerlink" title="모니터링 &amp; 테스트"></a>모니터링 &amp; 테스트</h2><p><a href="https://strongloop.com/strongblog/monitoring-stress-testing-nodejs-apps/" target="_blank" rel="noopener"><strong>Monitoring and Stress Testing Node.js Apps</strong><br><em>Editor’s Note: The NodeFly app is tested below. Note that StrongLoop has integrated and expanded this monitoring…</em>strongloop.com</a><br><a href="https://artillery.io/" target="_blank" rel="noopener"><strong>Artillery - a modern load testing toolkit</strong><br><em>Edit description</em>artillery.io</a><br><a href="https://blog.outsider.ne.kr/770" target="_blank" rel="noopener"><strong>mocha : node.js 테스트 프레임워크 :: Outsider’s Dev Story</strong><br><em>제가 쓴 책인 Node.js 프로그래밍의 “유닛 테스트”장에서 expresso와 vows를 테스트 프레임워로 설명했었습니다. 이 두 프레임워크는 node.js TDD 프레임워크 : expresso와 node.js…</em>blog.outsider.ne.kr</a></p>
+<p>mocha 가 가장 좋겠지? 하고 다시한번 읽어 보면서..</p>
+<p><strong># 테스트</strong><br><a href="http://han41858.tistory.com/5" target="_blank" rel="noopener"><strong>[번역] JavaScript 생태계의 현상황 : 초심자를 위한 안내 (2/2)</strong><br><em>다음 글의 번역입니다. 문제시 삭제하겠습니다. [State of the JavaScript Landscape: A Map for Newcomers] If writer does not want this article…</em>han41858.tistory.com</a></p>
+<p><strong># 구성 관련</strong></p>
+<p>많은 구성들이 있지만 내가 지금 필요한 구성들로 글을 쓴것들을 보면<br><a href="http://bglee.me/posts/2016/aws-gateway-lambda-ci/" target="_blank" rel="noopener"><strong>AWS API Gateway - Lambda - Travis-CI prototype 구현</strong><br><em>aws serverless architecture &#xC758; &#xD575;&#xC2EC;&#xC5D0; api gateway &#xC640; lambda &#xAC00; &#xC788;&#xB2E4;. …</em>bglee.me</a><br><a href="https://docs.travis-ci.com/user/deployment/codedeploy/" target="_blank" rel="noopener"><strong>AWS CodeDeploy - Travis CI</strong><br><em>Edit description</em>docs.travis-ci.com</a><br><a href="https://github.com/travis-ci/travis-cookbooks" target="_blank" rel="noopener"><strong>travis-ci/travis-cookbooks</strong><br><em>travis-cookbooks - Chef cookbook monolithic repo :book: :bomb:</em>github.com</a></p>
+<p>cookbook은 언제나 달콤</p>
+<p>지금 내가 고민한 DevOps &amp; Tech Stack은 CI의 중심에는 Trvis-CI가 있고 Slack으로 모든 모니터링 및 로그를 받아보는 형식이다.<br><a href="https://engr.overseerlabs.io/the-devops-tool-arsenal-results-from-100-devops-sre-surveys-c453483742f" target="_blank" rel="noopener"><strong>The DevOps tool arsenal: Results from ~100 DevOps/SRE surveys</strong><br><em>The survey</em>engr.overseerlabs.io</a></p>
+<p>서베이 결과</p>
+<p>1등 보면 Slack , AWS CloudWatch, AWS EC2, Docker 이고</p>
+<p>CI/CD는 언어나 환경의 특성을 많이 있을 것 같아 아직은 보편적으로 Jenkins가장 많은 사용을 보였다.<br><a href="https://www.cloudbees.com/jenkinsworld" target="_blank" rel="noopener"><strong>Jenkins World Home</strong><br><em>Jenkins User Conference will bring together the largest gathering of Jenkins user groups in the world, from August 28…</em>www.cloudbees.com</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/0*oPd5ASsnOCCSWT0f.png" alt="Jenkins World A Global DevOps Event 2017"><em>Jenkins World A Global DevOps Event 2017</em></p>
+<p>이런것도 한다 멋있네</p>
+<p>Jenkins VS Travis-CI 에서 고민중 ~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/01/16/DevOps를 알아보자/" data-id="cjr1pkl3n00091dc9tpomjt8n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,6 +720,11 @@
 
   
 
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+  </nav>
 
 </section>
         
@@ -139,6 +756,22 @@
         
           <li>
             <a href="/2019/01/16/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/3/">점심시간에 옥상요가 하고 싶다</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/4/">리더의 정의는 모르지만, 아빠란</a>
+          </li>
+        
+          <li>
+            <a href="/2019/01/16/5/">일한 만큼의 보상, 그리고 DAPP</a>
           </li>
         
       </ul>
