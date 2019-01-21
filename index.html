@@ -9,6 +9,15 @@
     enable_page_level_ads: true
   });
 </script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-132772384-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-132772384-1');
+</script>
   
 
   
@@ -69,9 +78,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Elixir Study Talk Log" class="article article-type-post" itemscope="" itemprop="blogPost">
+    <article id="post-9" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/01/16/Elixir Study Talk Log/" class="article-date">
+    <a href="/2019/01/16/9/" class="article-date">
   <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
 </a>
     
@@ -83,7 +92,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+      <a class="article-title" href="/2019/01/16/9/">Elixir regex — http, email, img, tel, address</a>
     </h1>
   
 
@@ -91,51 +100,50 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>지금이 적기이다.</p>
-<p><img src="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png" alt="phoenix 1.2에서 이런 이상한 구조 였는데."><em>phoenix 1.2에서 이런 이상한 구조 였는데.</em></p>
-<p><img src="https://cdn-images-1.medium.com/max/2508/1*SiXfSN0DB9QpfQunlP-Vtg.png" alt="웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다."><em>웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.</em></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tMO28ar0lW8" frameborder="0" allowfullscreen></iframe></center>
+        <p>Elixre <a href="http://www.elixre.uk/" target="_blank" rel="noopener">http://www.elixre.uk/</a></p>
+<ol>
+<li><p><strong>url</strong></p>
+<p> title = “hello <a href="http://medium.com/" target="_blank" rel="noopener">http://medium.com/</a>?test=11 12”</p>
+<p> #<br> regex_url = ~r/(https?:\/\/)?(([\da-z.-]+).([a-z.]{2,6}))([\/\w .-]<em>)</em>\/?(\&amp;?)<em>(([?])</em>([^ \t\r\n\v\f])*)/</p>
+<h1 id="첫번째-매칭되는-첫번째-문장"><a href="#첫번째-매칭되는-첫번째-문장" class="headerlink" title="첫번째 매칭되는 첫번째 문장"></a>첫번째 매칭되는 첫번째 문장</h1><p> link = Regex.run(regex_url, title) |&gt; hd</p>
+<h1 id="Replace-matches-in-a-string"><a href="#Replace-matches-in-a-string" class="headerlink" title="Replace matches in a string"></a><em>Replace matches in a string</em></h1><p> title = Regex.replace(regex_url, title, “”)</p>
+</li>
+</ol>
+<p><strong>2. email (작성중)</strong></p>
+<pre><code>title = &quot;hello abc@abc.com bye&quot;
+</code></pre><p><strong>3. img (작성중)</strong></p>
+<pre><code>title = &quot;hello http://ab.com/logo.png bye&quot;
+</code></pre><p><strong>4. tel (작성중)</strong></p>
+<pre><code>title = &quot;hello +82-10-9999-1111 bye&quot;
+</code></pre><p><strong>5. address (작성중)</strong></p>
+<p><strong>etc</strong></p>
+<p>원인은 모르겠지만 parameter 부분에</p>
+<p>[-a-zA-Z0–9:%_+.~#?&amp;//=]를 넣으면 구문에러가 발생한다.</p>
+<p>[^ \t\r\n\v\f]으로 변경하여 처리하였다.</p>
+<p>참조<br><a href="https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D" target="_blank" rel="noopener"><strong>정규 표현식 - 위키백과, 우리 모두의 백과사전</strong><br><em>컴퓨터 과학의 정규 언어로부터 유래하였으나 구현체에 따라서 정규 언어보다 더 넓은 언어를 표현할 수 있는 경우도 있으며, 심지어 정규 표현식 자체의 문법도 여러 가지 존재하고 있다. 수많은 프로그래밍 언어가 정규…</em>ko.wikipedia.org</a></p>
+<pre><code>*# A regex sigil to match &apos;foo&apos;*
+~r/foo/
 
-<p>에서 더 자세한 이야기를 하고 있고</p>
-<p><img src="https://cdn-images-1.medium.com/max/2432/1*xT6O4-zDjQ6BXp-eMyNgpA.png" alt="이렇게 바운드 콘텍스트 개념을 적용하여"><em>이렇게 바운드 콘텍스트 개념을 적용하여</em></p>
-<p><img src="https://cdn-images-1.medium.com/max/2500/1*5GjQvkP73ZugzzaJ5QQsjg.png" alt="위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자"><em>위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자</em></p>
-<iframe src="https://medium.com/media/6cb6a2f37b04e036f0e26eac45e08c35" frameborder="0"></iframe>
+*# Interpolation can be used*
+~r/foo/ **=** ~r/#{&quot;foo&quot;}/
 
-<p>phoenix을 위한 frontend js framework를 고민하였고 vue.js를 연결해서 사용하는 방법도 당연히 리엑트와 elm도 후보였다.</p>
-<p>자연스럽게 elixir의 대한 관심은 함수형언어로 이어지고 주제는</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*6QCxrtFc380_-vDAevth3w.png" alt="이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ"><em>이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ</em></p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*XsReMDLs7u0clFF9joSWaw.png" alt="이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)"><em>이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)</em></p>
-<p>그러면 다 좋은데 웹템플릿도 괜찮을까? form만드는 것도?<br><a href="http://blog.plataformatec.com.br/2016/09/dynamic-forms-with-phoenix/" target="_blank" rel="noopener"><strong>Dynamic forms with Phoenix</strong><br><em>Today we will learn how to build forms in Phoenix that use our schema information to dynamically show the proper input…</em>blog.plataformatec.com.br</a></p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*PSEaxAX9-WOPogDvJYZujA.png" alt="라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…"><em>라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…</em></p>
-<p>그런 고민은</p>
-<p>그러면 phoenix embeded webpage를 사용해야할지 frontend를 js framework가 하고 json / channel같은걸로 통신만 해야할지..</p>
-<h2 id="Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend"><a href="#Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend" class="headerlink" title="Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend"></a><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330" target="_blank" rel="noopener">Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend</a></h2><p><img src="https://cdn-images-1.medium.com/max/2000/1*6D0iZWiVDR7i1VdRZSOl3A.png" alt="[https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz](https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz)"><em><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz" target="_blank" rel="noopener">https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz</a></em></p>
-<p>여러 이야기중에 개인적으로 이야기가 맘에 든다. 그래서 나도 phoenix + webpack2 + vue.js 2 로 개발을 하고 있다. 그첫번째 starter 로<br><a href="https://github.com/ElixirStudy0730/phoenix_webpack2" target="_blank" rel="noopener"><strong>ElixirStudy0730/phoenix_webpack2</strong><br><em>phoenix_webpack2 - Phoenix + Webpack 2</em>github.com</a></p>
-<p>이것을 공개 했고 벌써 더 빠른사람들이 phoenix 1.3rc +webpack2<br><a href="https://elixirforum.com/t/how-to-plug-in-webpack-2-0-into-phoenix-1-3-0-rc/3969" target="_blank" rel="noopener"><strong>How to plug in webpack 2.0 into phoenix 1.3.0-rc</strong><br><em>Hi Everyone, I want to replace brunch with webpack. Does anyone has a clue how to call the watcher now in the sub…</em>elixirforum.com</a></p>
-<p>에 대한 이야기도 많이 하고 있다. (참빠르다 !!)</p>
-<p>개인적으로도 elixir phoenix +webpeck 2+ vue.js 2 의 조합이 좋다.</p>
-<p>백엔드개발자는 elixir phoenix +webpeck 2 이렇게 사용하고</p>
-<p>프론트엔드 개발자는 webpeck 2+ vue.js 2 이렇게 사용한다.</p>
-<p>같이 프론트엔드 개발자와 코워킹 해본결과 vue cli가 webpack을 지원해서 코드를 구분이어서 사용하기에도 괜찮다.</p>
-<p>추신</p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*zyZgfDN5eAdqKL8BoowiDA.png" alt="[https://elixirforum.com/t/thoughts-about-single-page-applications/865/7](https://elixirforum.com/t/thoughts-about-single-page-applications/865/7) 이 이야기는 40개넘는 이야기가 꽃핀다."><em><a href="https://elixirforum.com/t/thoughts-about-single-page-applications/865/7" target="_blank" rel="noopener">https://elixirforum.com/t/thoughts-about-single-page-applications/865/7</a> 이 이야기는 40개넘는 이야기가 꽃핀다.</em></p>
-<p>(광고) ㅎ<br><a href="https://github.com/ElixirStudy0730/ElixirStudy0730" target="_blank" rel="noopener"><strong>ElixirStudy0730/ElixirStudy0730</strong><br><em>ElixirStudy0730 - 0730팀은 elixir를 한국에 전파하기 위해 조직된 스터디 모임입니다.</em>github.com</a></p>
-<p>같이 스터디 하실분 찾습니다.</p>
-<p>추신1. 더 많은 함수형 언어책이 있으면 좋겠습니다.<br><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B6064588422" target="_blank" rel="noopener"><strong>함수형 사고</strong><br><em>객체지향 언어에 길든 개발자들에게 예제를 통해 함수형으로 ‘생각’하는 법을 깨닫게 해주는 책. 스칼라 같은 함수형 언어의 수요가 늘고 있지만 자바 같은 객체지향에 익숙한 개발자들은 함수형 패러다임으로 넘어가는 데…</em>www.hanbit.co.kr</a></p>
-<p>추신2. 함수형언어를 배움에 있어서 이책도 아주 좋습니다.<br><a href="https://pragprog.com/book/phoenix/programming-phoenix" target="_blank" rel="noopener"><strong>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast by Chris McCord, Bruce Tate, and José Valim …</strong><br><em>Learn to code Phoenix from the experts: Phoenix creator Chris McCord, Elixir creator José Valim, and award-winning…</em>pragprog.com</a></p>
-<p>그밖에</p>
-<p>rail conf. vs ruby conf. vs elixir phoenix conf. 이야기 등 하였고<br><a href="http://www.elixirconf.eu/elixirconf2017/kevin-rockwood" target="_blank" rel="noopener"><strong>ElixirConf.EU 2017</strong><br><em>The third European edition of the ElixirConf is going to take place in beautiful Barcelona on 4-5 May with the…</em>www.elixirconf.eu</a></p>
-<p><a href="https://www.meetup.com/ko-KR/Seoul-Elixir-Meetup/" target="_blank" rel="noopener">elixir seoul meetup </a>의 주최자인 케빈이 5월달에 스페인에서 발표를 하게되어서 축하해주었습니다.</p>
-<p>2주후에 meetup이 있을 예정이고 매주 스터디는 수요일에 하이브아레나에서 7시에 열립니다. (아래링크 참고)<br><a href="https://www.facebook.com/events/1382561691813948/?notif_t=plan_admin_added&amp;notif_id=1488955598969209" target="_blank" rel="noopener"><strong>Elixir Study 0730</strong><br><em>ElixirStudy0730 We study building websites with the Elixir and Phoenix framework by pooling our knowledge and…</em>www.facebook.com</a></p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*M8SiIXZ-snpYJ66F5VjEgw.png" alt=""></p>
-<p><strong>개발팁</strong> : ihex -S mix 이렇게 하고 :observer.start 명령을 실행하면 아래와 같이 프로그램이 실행되고</p>
-<p><img src="https://cdn-images-1.medium.com/max/2014/1*wY2_yLbe6tHW6QW-AROfwA.png" alt="어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다"><em>어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다</em></p>
-<p><img src="https://cdn-images-1.medium.com/max/2000/1*rqthMu2OIFiYcmsw1u1sTA.png" alt="물론 시스템 리소스를 사용량도 확인이 가능하다."><em>물론 시스템 리소스를 사용량도 확인이 가능하다.</em></p>
+*# Test if a string matches*
+true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
+
+*# Run returns first match*
+[&quot;foo1&quot;, &quot;1&quot;] **=** Regex**.**run(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Scan returns all matches*
+[[&quot;foo1&quot;, &quot;1&quot;], [&quot;foo2&quot;, &quot;2&quot;]] **=** Regex**.**scan(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
+
+*# Replace matches in a string*
+&quot;one_two_three&quot; **=** Regex**.**replace(~r/-/, &quot;one-two-three&quot;, &quot;_&quot;)
+</code></pre><p><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener"><strong>8 Regular Expressions You Should Know</strong><br><em>Regular expressions are a language of their own. When you learn a new programming language, they’re this little sub…</em>code.tutsplus.com</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/Elixir Study Talk Log/" data-id="cjr1pqwg7000blgc9bj3wutsn" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/9/" data-id="cjr5rf6bo000brqc9neflb6uk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/2/" data-id="cjr1pqwfm0000lgc9ekkqjnmq" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/2/" data-id="cjr5rf6b90000rqc9jvebaer6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -231,7 +239,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/3/" data-id="cjr1pqwfv0002lgc9vcn409jy" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/3/" data-id="cjr5rf6bf0002rqc9glwcknub" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,7 +308,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/4/" data-id="cjr1pqwfw0003lgc97tabi28a" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/4/" data-id="cjr5rf6bg0003rqc93035n5ra" class="article-share-link">Share</a>
       
       
     </footer>
@@ -344,7 +352,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/6/" data-id="cjr1pqwfx0004lgc90miwuwd3" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/6/" data-id="cjr5rf6bh0004rqc9mcl0aiey" class="article-share-link">Share</a>
       
       
     </footer>
@@ -415,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/5/" data-id="cjr1pqwfy0005lgc9hbxkauh4" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/5/" data-id="cjr5rf6bi0005rqc9921atvz1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -514,82 +522,7 @@ services:
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/8/" data-id="cjr1pqwfz0006lgc9z50lmhlf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-9" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/16/9/" class="article-date">
-  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/16/9/">Elixir regex — http, email, img, tel, address</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Elixre <a href="http://www.elixre.uk/" target="_blank" rel="noopener">http://www.elixre.uk/</a></p>
-<ol>
-<li><p><strong>url</strong></p>
-<p> title = “hello <a href="http://medium.com/" target="_blank" rel="noopener">http://medium.com/</a>?test=11 12”</p>
-<p> #<br> regex_url = ~r/(https?:\/\/)?(([\da-z.-]+).([a-z.]{2,6}))([\/\w .-]<em>)</em>\/?(\&amp;?)<em>(([?])</em>([^ \t\r\n\v\f])*)/</p>
-<h1 id="첫번째-매칭되는-첫번째-문장"><a href="#첫번째-매칭되는-첫번째-문장" class="headerlink" title="첫번째 매칭되는 첫번째 문장"></a>첫번째 매칭되는 첫번째 문장</h1><p> link = Regex.run(regex_url, title) |&gt; hd</p>
-<h1 id="Replace-matches-in-a-string"><a href="#Replace-matches-in-a-string" class="headerlink" title="Replace matches in a string"></a><em>Replace matches in a string</em></h1><p> title = Regex.replace(regex_url, title, “”)</p>
-</li>
-</ol>
-<p><strong>2. email (작성중)</strong></p>
-<pre><code>title = &quot;hello abc@abc.com bye&quot;
-</code></pre><p><strong>3. img (작성중)</strong></p>
-<pre><code>title = &quot;hello http://ab.com/logo.png bye&quot;
-</code></pre><p><strong>4. tel (작성중)</strong></p>
-<pre><code>title = &quot;hello +82-10-9999-1111 bye&quot;
-</code></pre><p><strong>5. address (작성중)</strong></p>
-<p><strong>etc</strong></p>
-<p>원인은 모르겠지만 parameter 부분에</p>
-<p>[-a-zA-Z0–9:%_+.~#?&amp;//=]를 넣으면 구문에러가 발생한다.</p>
-<p>[^ \t\r\n\v\f]으로 변경하여 처리하였다.</p>
-<p>참조<br><a href="https://ko.wikipedia.org/wiki/%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D" target="_blank" rel="noopener"><strong>정규 표현식 - 위키백과, 우리 모두의 백과사전</strong><br><em>컴퓨터 과학의 정규 언어로부터 유래하였으나 구현체에 따라서 정규 언어보다 더 넓은 언어를 표현할 수 있는 경우도 있으며, 심지어 정규 표현식 자체의 문법도 여러 가지 존재하고 있다. 수많은 프로그래밍 언어가 정규…</em>ko.wikipedia.org</a></p>
-<pre><code>*# A regex sigil to match &apos;foo&apos;*
-~r/foo/
-
-*# Interpolation can be used*
-~r/foo/ **=** ~r/#{&quot;foo&quot;}/
-
-*# Test if a string matches*
-true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
-
-*# Run returns first match*
-[&quot;foo1&quot;, &quot;1&quot;] **=** Regex**.**run(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
-
-*# Scan returns all matches*
-[[&quot;foo1&quot;, &quot;1&quot;], [&quot;foo2&quot;, &quot;2&quot;]] **=** Regex**.**scan(~r/foo([0-9])/, &quot;foo1 foo2&quot;)
-
-*# Replace matches in a string*
-&quot;one_two_three&quot; **=** Regex**.**replace(~r/-/, &quot;one-two-three&quot;, &quot;_&quot;)
-</code></pre><p><a href="https://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149" target="_blank" rel="noopener"><strong>8 Regular Expressions You Should Know</strong><br><em>Regular expressions are a language of their own. When you learn a new programming language, they’re this little sub…</em>code.tutsplus.com</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/9/" data-id="cjr1pqwg10007lgc9seteglyd" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/8/" data-id="cjr5rf6bj0006rqc9ub91dkzg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -664,7 +597,7 @@ true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/7/" data-id="cjr1pqwg20008lgc9rddx6xm4" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/7/" data-id="cjr5rf6bj0007rqc9ckwyxdan" class="article-share-link">Share</a>
       
       
     </footer>
@@ -720,7 +653,83 @@ true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://blog.kilos.network/2019/01/16/DevOps를 알아보자/" data-id="cjr1pqwg30009lgc9wcfkjb9h" class="article-share-link">Share</a>
+      <a data-url="http://blog.kilos.network/2019/01/16/DevOps를 알아보자/" data-id="cjr5rf6bk0008rqc9424z1usz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Elixir Study Talk Log" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/16/Elixir Study Talk Log/" class="article-date">
+  <time datetime="2019-01-16T08:46:52.000Z" itemprop="datePublished">2019-01-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>지금이 적기이다.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2492/1*4BEK2U91K9EAW6zpvwK51g.png" alt="phoenix 1.2에서 이런 이상한 구조 였는데."><em>phoenix 1.2에서 이런 이상한 구조 였는데.</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2508/1*SiXfSN0DB9QpfQunlP-Vtg.png" alt="웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다."><em>웹인터페이스역할의 앱을 추가해서 여러앱을 실행할 수 있는 구조로 만들었다.</em></p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/tMO28ar0lW8" frameborder="0" allowfullscreen></iframe></center>
+
+<p>에서 더 자세한 이야기를 하고 있고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2432/1*xT6O4-zDjQ6BXp-eMyNgpA.png" alt="이렇게 바운드 콘텍스트 개념을 적용하여"><em>이렇게 바운드 콘텍스트 개념을 적용하여</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2500/1*5GjQvkP73ZugzzaJ5QQsjg.png" alt="위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자"><em>위와 같이 디렉토리 구조를 만들어서 비지니스로직과 스키마를 구분해서 하자</em></p>
+<iframe src="https://medium.com/media/6cb6a2f37b04e036f0e26eac45e08c35" frameborder="0"></iframe>
+
+<p>phoenix을 위한 frontend js framework를 고민하였고 vue.js를 연결해서 사용하는 방법도 당연히 리엑트와 elm도 후보였다.</p>
+<p>자연스럽게 elixir의 대한 관심은 함수형언어로 이어지고 주제는</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*6QCxrtFc380_-vDAevth3w.png" alt="이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ"><em>이렇게 좋은 패턴매칭이 있지만 어디에 사용할줄 모른다는 … ㅎ</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*XsReMDLs7u0clFF9joSWaw.png" alt="이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)"><em>이렇게 나이스하게 params를 조건문 없이 개별 확인 없이 초기화가 가능합니다. (그 전 코드는 그냥 case문)</em></p>
+<p>그러면 다 좋은데 웹템플릿도 괜찮을까? form만드는 것도?<br><a href="http://blog.plataformatec.com.br/2016/09/dynamic-forms-with-phoenix/" target="_blank" rel="noopener"><strong>Dynamic forms with Phoenix</strong><br><em>Today we will learn how to build forms in Phoenix that use our schema information to dynamically show the proper input…</em>blog.plataformatec.com.br</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*PSEaxAX9-WOPogDvJYZujA.png" alt="라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…"><em>라벨링, 텍스트 inpu, 에러 표시 까지 깔끔하게 제공한다. 자세한건 링크…</em></p>
+<p>그런 고민은</p>
+<p>그러면 phoenix embeded webpage를 사용해야할지 frontend를 js framework가 하고 json / channel같은걸로 통신만 해야할지..</p>
+<h2 id="Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend"><a href="#Embedded-Elixir-Phoenix-in-a-webpage-vs-Frontend-communicating-with-a-Phoenix-Backend" class="headerlink" title="Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend"></a><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330" target="_blank" rel="noopener">Embedded Elixir/Phoenix in a webpage vs. Frontend communicating with a Phoenix Backend</a></h2><p><img src="https://cdn-images-1.medium.com/max/2000/1*6D0iZWiVDR7i1VdRZSOl3A.png" alt="[https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz](https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz)"><em><a href="https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz" target="_blank" rel="noopener">https://elixirforum.com/t/embedded-elixir-phoenix-in-a-webpage-vs-frontend-communicating-with-a-phoenix-backend/1330/31?u=hongbuzz</a></em></p>
+<p>여러 이야기중에 개인적으로 이야기가 맘에 든다. 그래서 나도 phoenix + webpack2 + vue.js 2 로 개발을 하고 있다. 그첫번째 starter 로<br><a href="https://github.com/ElixirStudy0730/phoenix_webpack2" target="_blank" rel="noopener"><strong>ElixirStudy0730/phoenix_webpack2</strong><br><em>phoenix_webpack2 - Phoenix + Webpack 2</em>github.com</a></p>
+<p>이것을 공개 했고 벌써 더 빠른사람들이 phoenix 1.3rc +webpack2<br><a href="https://elixirforum.com/t/how-to-plug-in-webpack-2-0-into-phoenix-1-3-0-rc/3969" target="_blank" rel="noopener"><strong>How to plug in webpack 2.0 into phoenix 1.3.0-rc</strong><br><em>Hi Everyone, I want to replace brunch with webpack. Does anyone has a clue how to call the watcher now in the sub…</em>elixirforum.com</a></p>
+<p>에 대한 이야기도 많이 하고 있다. (참빠르다 !!)</p>
+<p>개인적으로도 elixir phoenix +webpeck 2+ vue.js 2 의 조합이 좋다.</p>
+<p>백엔드개발자는 elixir phoenix +webpeck 2 이렇게 사용하고</p>
+<p>프론트엔드 개발자는 webpeck 2+ vue.js 2 이렇게 사용한다.</p>
+<p>같이 프론트엔드 개발자와 코워킹 해본결과 vue cli가 webpack을 지원해서 코드를 구분이어서 사용하기에도 괜찮다.</p>
+<p>추신</p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*zyZgfDN5eAdqKL8BoowiDA.png" alt="[https://elixirforum.com/t/thoughts-about-single-page-applications/865/7](https://elixirforum.com/t/thoughts-about-single-page-applications/865/7) 이 이야기는 40개넘는 이야기가 꽃핀다."><em><a href="https://elixirforum.com/t/thoughts-about-single-page-applications/865/7" target="_blank" rel="noopener">https://elixirforum.com/t/thoughts-about-single-page-applications/865/7</a> 이 이야기는 40개넘는 이야기가 꽃핀다.</em></p>
+<p>(광고) ㅎ<br><a href="https://github.com/ElixirStudy0730/ElixirStudy0730" target="_blank" rel="noopener"><strong>ElixirStudy0730/ElixirStudy0730</strong><br><em>ElixirStudy0730 - 0730팀은 elixir를 한국에 전파하기 위해 조직된 스터디 모임입니다.</em>github.com</a></p>
+<p>같이 스터디 하실분 찾습니다.</p>
+<p>추신1. 더 많은 함수형 언어책이 있으면 좋겠습니다.<br><a href="http://www.hanbit.co.kr/store/books/look.php?p_code=B6064588422" target="_blank" rel="noopener"><strong>함수형 사고</strong><br><em>객체지향 언어에 길든 개발자들에게 예제를 통해 함수형으로 ‘생각’하는 법을 깨닫게 해주는 책. 스칼라 같은 함수형 언어의 수요가 늘고 있지만 자바 같은 객체지향에 익숙한 개발자들은 함수형 패러다임으로 넘어가는 데…</em>www.hanbit.co.kr</a></p>
+<p>추신2. 함수형언어를 배움에 있어서 이책도 아주 좋습니다.<br><a href="https://pragprog.com/book/phoenix/programming-phoenix" target="_blank" rel="noopener"><strong>Programming Phoenix: Productive |&gt; Reliable |&gt; Fast by Chris McCord, Bruce Tate, and José Valim …</strong><br><em>Learn to code Phoenix from the experts: Phoenix creator Chris McCord, Elixir creator José Valim, and award-winning…</em>pragprog.com</a></p>
+<p>그밖에</p>
+<p>rail conf. vs ruby conf. vs elixir phoenix conf. 이야기 등 하였고<br><a href="http://www.elixirconf.eu/elixirconf2017/kevin-rockwood" target="_blank" rel="noopener"><strong>ElixirConf.EU 2017</strong><br><em>The third European edition of the ElixirConf is going to take place in beautiful Barcelona on 4-5 May with the…</em>www.elixirconf.eu</a></p>
+<p><a href="https://www.meetup.com/ko-KR/Seoul-Elixir-Meetup/" target="_blank" rel="noopener">elixir seoul meetup </a>의 주최자인 케빈이 5월달에 스페인에서 발표를 하게되어서 축하해주었습니다.</p>
+<p>2주후에 meetup이 있을 예정이고 매주 스터디는 수요일에 하이브아레나에서 7시에 열립니다. (아래링크 참고)<br><a href="https://www.facebook.com/events/1382561691813948/?notif_t=plan_admin_added&amp;notif_id=1488955598969209" target="_blank" rel="noopener"><strong>Elixir Study 0730</strong><br><em>ElixirStudy0730 We study building websites with the Elixir and Phoenix framework by pooling our knowledge and…</em>www.facebook.com</a></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*M8SiIXZ-snpYJ66F5VjEgw.png" alt=""></p>
+<p><strong>개발팁</strong> : ihex -S mix 이렇게 하고 :observer.start 명령을 실행하면 아래와 같이 프로그램이 실행되고</p>
+<p><img src="https://cdn-images-1.medium.com/max/2014/1*wY2_yLbe6tHW6QW-AROfwA.png" alt="어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다"><em>어플리케이션의 구조 및 참조하는 라이브러리들의 구조를 확인이 가능하다</em></p>
+<p><img src="https://cdn-images-1.medium.com/max/2000/1*rqthMu2OIFiYcmsw1u1sTA.png" alt="물론 시스템 리소스를 사용량도 확인이 가능하다."><em>물론 시스템 리소스를 사용량도 확인이 가능하다.</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://blog.kilos.network/2019/01/16/Elixir Study Talk Log/" data-id="cjr5rf6bm0009rqc98izq2z4g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -766,7 +775,7 @@ true **=** Regex**.**match?( ~r/foo/ , &quot;Hello foo&quot;)
       <ul>
         
           <li>
-            <a href="/2019/01/16/Elixir Study Talk Log/">Elixir Study Talk Log</a>
+            <a href="/2019/01/16/9/">Elixir regex — http, email, img, tel, address</a>
           </li>
         
           <li>
